@@ -76,5 +76,15 @@ namespace GB_lesson_forms
 				Clipboard.SetText(generatorHistory.Text);
 			}
 		}
+
+		private void insertDateToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			notepad.AppendText(DateTime.Now.ToShortDateString() + " ");
+		}
+
+		private void insertTimeToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			notepad.AppendText(DateTime.Now.ToShortTimeString() + " ");
+		}
 	}
 }
