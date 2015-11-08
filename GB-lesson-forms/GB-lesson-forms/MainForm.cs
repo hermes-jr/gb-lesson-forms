@@ -32,19 +32,19 @@ namespace GB_lesson_forms
 		private void btnPlus_Click(object sender, EventArgs e)
 		{
 			counter = (counter <= int.MaxValue - 1) ? counter + 1 : counter;
-			label1.Text = counter.ToString();
+			counterLabel.Text = counter.ToString();
 		}
 
 		private void btnMinus_Click(object sender, EventArgs e)
 		{
 			counter = (counter >= int.MinValue + 1) ? counter - 1 : counter;
-			label1.Text = counter.ToString();
+			counterLabel.Text = counter.ToString();
 		}
 
 		private void btnReset_Click(object sender, EventArgs e)
 		{
 			counter = 0;
-			label1.Text = counter.ToString();
+			counterLabel.Text = counter.ToString();
 		}
 	}
 }

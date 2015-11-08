@@ -41,7 +41,7 @@
 			this.btnPlus = new System.Windows.Forms.Button();
 			this.btnMinus = new System.Windows.Forms.Button();
 			this.btnReset = new System.Windows.Forms.Button();
-			this.label1 = new System.Windows.Forms.Label();
+			this.counterLabel = new System.Windows.Forms.Label();
 			this.MainMenu.SuspendLayout();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
@@ -103,7 +103,7 @@
 			// 
 			// tabPage1
 			// 
-			this.tabPage1.Controls.Add(this.label1);
+			this.tabPage1.Controls.Add(this.counterLabel);
 			this.tabPage1.Controls.Add(this.btnReset);
 			this.tabPage1.Controls.Add(this.btnMinus);
 			this.tabPage1.Controls.Add(this.btnPlus);
@@ -173,16 +173,16 @@
 			this.btnReset.UseVisualStyleBackColor = true;
 			this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
 			// 
-			// label1
+			// counterLabel
 			// 
-			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label1.Location = new System.Drawing.Point(126, 15);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(68, 73);
-			this.label1.TabIndex = 3;
-			this.label1.Text = "0";
-			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.counterLabel.AutoSize = true;
+			this.counterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.counterLabel.Location = new System.Drawing.Point(126, 15);
+			this.counterLabel.Name = "counterLabel";
+			this.counterLabel.Size = new System.Drawing.Size(68, 73);
+			this.counterLabel.TabIndex = 3;
+			this.counterLabel.Text = "0";
+			this.counterLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// MainForm
 			// 
@@ -216,7 +216,7 @@
 		private System.Windows.Forms.TabPage tabPage2;
 		private System.Windows.Forms.TabPage tabPage3;
 		private System.Windows.Forms.TabPage tabPage4;
-		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label counterLabel;
 		private System.Windows.Forms.Button btnReset;
 		private System.Windows.Forms.Button btnMinus;
 		private System.Windows.Forms.Button btnPlus;
