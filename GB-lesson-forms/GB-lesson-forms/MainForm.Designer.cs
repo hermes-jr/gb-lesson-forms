@@ -38,8 +38,13 @@
 			this.tabPage2 = new System.Windows.Forms.TabPage();
 			this.tabPage3 = new System.Windows.Forms.TabPage();
 			this.tabPage4 = new System.Windows.Forms.TabPage();
+			this.btnPlus = new System.Windows.Forms.Button();
+			this.btnMinus = new System.Windows.Forms.Button();
+			this.btnReset = new System.Windows.Forms.Button();
+			this.label1 = new System.Windows.Forms.Label();
 			this.MainMenu.SuspendLayout();
 			this.tabControl1.SuspendLayout();
+			this.tabPage1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// MainMenu
@@ -98,10 +103,14 @@
 			// 
 			// tabPage1
 			// 
+			this.tabPage1.Controls.Add(this.label1);
+			this.tabPage1.Controls.Add(this.btnReset);
+			this.tabPage1.Controls.Add(this.btnMinus);
+			this.tabPage1.Controls.Add(this.btnPlus);
 			this.tabPage1.Location = new System.Drawing.Point(4, 22);
 			this.tabPage1.Name = "tabPage1";
 			this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage1.Size = new System.Drawing.Size(276, 211);
+			this.tabPage1.Size = new System.Drawing.Size(498, 275);
 			this.tabPage1.TabIndex = 0;
 			this.tabPage1.Text = "Counter";
 			this.tabPage1.UseVisualStyleBackColor = true;
@@ -111,7 +120,7 @@
 			this.tabPage2.Location = new System.Drawing.Point(4, 22);
 			this.tabPage2.Name = "tabPage2";
 			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage2.Size = new System.Drawing.Size(276, 211);
+			this.tabPage2.Size = new System.Drawing.Size(498, 275);
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.Text = "Generator";
 			this.tabPage2.UseVisualStyleBackColor = true;
@@ -120,7 +129,7 @@
 			// 
 			this.tabPage3.Location = new System.Drawing.Point(4, 22);
 			this.tabPage3.Name = "tabPage3";
-			this.tabPage3.Size = new System.Drawing.Size(276, 211);
+			this.tabPage3.Size = new System.Drawing.Size(498, 275);
 			this.tabPage3.TabIndex = 2;
 			this.tabPage3.Text = "Converter";
 			this.tabPage3.UseVisualStyleBackColor = true;
@@ -133,6 +142,47 @@
 			this.tabPage4.TabIndex = 3;
 			this.tabPage4.Text = "Notepad";
 			this.tabPage4.UseVisualStyleBackColor = true;
+			// 
+			// btnPlus
+			// 
+			this.btnPlus.Location = new System.Drawing.Point(8, 6);
+			this.btnPlus.Name = "btnPlus";
+			this.btnPlus.Size = new System.Drawing.Size(75, 23);
+			this.btnPlus.TabIndex = 0;
+			this.btnPlus.Text = "+";
+			this.btnPlus.UseVisualStyleBackColor = true;
+			this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
+			// 
+			// btnMinus
+			// 
+			this.btnMinus.Location = new System.Drawing.Point(8, 35);
+			this.btnMinus.Name = "btnMinus";
+			this.btnMinus.Size = new System.Drawing.Size(75, 23);
+			this.btnMinus.TabIndex = 1;
+			this.btnMinus.Text = "-";
+			this.btnMinus.UseVisualStyleBackColor = true;
+			this.btnMinus.Click += new System.EventHandler(this.btnMinus_Click);
+			// 
+			// btnReset
+			// 
+			this.btnReset.Location = new System.Drawing.Point(8, 65);
+			this.btnReset.Name = "btnReset";
+			this.btnReset.Size = new System.Drawing.Size(75, 23);
+			this.btnReset.TabIndex = 2;
+			this.btnReset.Text = "Reset";
+			this.btnReset.UseVisualStyleBackColor = true;
+			this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label1.Location = new System.Drawing.Point(126, 15);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(68, 73);
+			this.label1.TabIndex = 3;
+			this.label1.Text = "0";
+			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// MainForm
 			// 
@@ -147,6 +197,8 @@
 			this.MainMenu.ResumeLayout(false);
 			this.MainMenu.PerformLayout();
 			this.tabControl1.ResumeLayout(false);
+			this.tabPage1.ResumeLayout(false);
+			this.tabPage1.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -164,6 +216,10 @@
 		private System.Windows.Forms.TabPage tabPage2;
 		private System.Windows.Forms.TabPage tabPage3;
 		private System.Windows.Forms.TabPage tabPage4;
+		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Button btnReset;
+		private System.Windows.Forms.Button btnMinus;
+		private System.Windows.Forms.Button btnPlus;
 	}
 }
 
