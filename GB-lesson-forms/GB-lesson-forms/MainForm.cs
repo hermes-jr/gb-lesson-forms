@@ -176,5 +176,68 @@ namespace GB_lesson_forms
 			double toval = fromval * ( m1 / m2 );
 			convTextTo.Text = toval.ToString();
 		}
+
+		private void convBtnSwap_Click(object sender, EventArgs e)
+		{
+			string tmp = convToCombo.Text;
+			convToCombo.Text = convFromCombo.Text;
+			convFromCombo.Text = tmp;
+		}
+
+		private void convType_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			// Crap, LOL
+			switch (convType.Text)
+			{
+				case "Weight":
+					metric.Clear();
+					metric.Add("g", 1);
+					metric.Add("kg", 1000);
+					metric.Add("t", 1000000);
+					metric.Add("lb", 453.6);
+					metric.Add("oz", 283);
+					convFromCombo.Items.Clear();
+					convFromCombo.Items.Add("g");
+					convFromCombo.Items.Add("kg");
+					convFromCombo.Items.Add("t");
+					convFromCombo.Items.Add("lb");
+					convFromCombo.Items.Add("oz");
+					convToCombo.Items.Clear();
+					convToCombo.Items.Add("g");
+					convToCombo.Items.Add("kg");
+					convToCombo.Items.Add("t");
+					convToCombo.Items.Add("lb");
+					convToCombo.Items.Add("oz");
+					convFromCombo.Text = "g";
+					convToCombo.Text = "kg";
+					break;
+				case "Length":
+				default:
+					metric.Clear();
+					metric.Add("mm", 1);
+					metric.Add("cm", 10);
+					metric.Add("dm", 100);
+					metric.Add("m", 1000);
+					metric.Add("km", 1000000);
+					metric.Add("mile", 1609344);
+					convFromCombo.Items.Clear();
+					convFromCombo.Items.Add("mm");
+					convFromCombo.Items.Add("cm");
+					convFromCombo.Items.Add("dm");
+					convFromCombo.Items.Add("m");
+					convFromCombo.Items.Add("km");
+					convFromCombo.Items.Add("mile");
+					convToCombo.Items.Clear();
+					convToCombo.Items.Add("mm");
+					convToCombo.Items.Add("cm");
+					convToCombo.Items.Add("dm");
+					convToCombo.Items.Add("m");
+					convToCombo.Items.Add("km");
+					convToCombo.Items.Add("mile");
+					convFromCombo.Text = "mm";
+					convToCombo.Text = "m";
+					break;
+			}
+		}
 	}
 }

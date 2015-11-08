@@ -70,6 +70,8 @@
 			this.convTextFrom = new System.Windows.Forms.TextBox();
 			this.convTextTo = new System.Windows.Forms.TextBox();
 			this.convButtonGo = new System.Windows.Forms.Button();
+			this.convBtnSwap = new System.Windows.Forms.Button();
+			this.convType = new System.Windows.Forms.ComboBox();
 			this.MainMenu.SuspendLayout();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
@@ -357,6 +359,8 @@
 			// 
 			// tabPage3
 			// 
+			this.tabPage3.Controls.Add(this.convType);
+			this.tabPage3.Controls.Add(this.convBtnSwap);
 			this.tabPage3.Controls.Add(this.convButtonGo);
 			this.tabPage3.Controls.Add(this.convTextTo);
 			this.tabPage3.Controls.Add(this.convTextFrom);
@@ -490,7 +494,7 @@
             "m",
             "km",
             "mile"});
-			this.convFromCombo.Location = new System.Drawing.Point(62, 3);
+			this.convFromCombo.Location = new System.Drawing.Point(47, 3);
 			this.convFromCombo.Name = "convFromCombo";
 			this.convFromCombo.Size = new System.Drawing.Size(156, 21);
 			this.convFromCombo.TabIndex = 0;
@@ -506,7 +510,7 @@
             "m",
             "km",
             "mile"});
-			this.convToCombo.Location = new System.Drawing.Point(62, 30);
+			this.convToCombo.Location = new System.Drawing.Point(238, 3);
 			this.convToCombo.Name = "convToCombo";
 			this.convToCombo.Size = new System.Drawing.Size(156, 21);
 			this.convToCombo.TabIndex = 1;
@@ -515,7 +519,7 @@
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(21, 6);
+			this.label1.Location = new System.Drawing.Point(8, 6);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(33, 13);
 			this.label1.TabIndex = 2;
@@ -524,7 +528,7 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(21, 33);
+			this.label2.Location = new System.Drawing.Point(209, 6);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(23, 13);
 			this.label2.TabIndex = 3;
@@ -532,7 +536,7 @@
 			// 
 			// convTextFrom
 			// 
-			this.convTextFrom.Location = new System.Drawing.Point(224, 3);
+			this.convTextFrom.Location = new System.Drawing.Point(103, 30);
 			this.convTextFrom.Name = "convTextFrom";
 			this.convTextFrom.Size = new System.Drawing.Size(100, 20);
 			this.convTextFrom.TabIndex = 4;
@@ -540,7 +544,7 @@
 			// 
 			// convTextTo
 			// 
-			this.convTextTo.Location = new System.Drawing.Point(224, 30);
+			this.convTextTo.Location = new System.Drawing.Point(238, 30);
 			this.convTextTo.Name = "convTextTo";
 			this.convTextTo.ReadOnly = true;
 			this.convTextTo.Size = new System.Drawing.Size(100, 20);
@@ -548,13 +552,36 @@
 			// 
 			// convButtonGo
 			// 
-			this.convButtonGo.Location = new System.Drawing.Point(249, 56);
+			this.convButtonGo.Location = new System.Drawing.Point(238, 56);
 			this.convButtonGo.Name = "convButtonGo";
 			this.convButtonGo.Size = new System.Drawing.Size(75, 23);
 			this.convButtonGo.TabIndex = 6;
 			this.convButtonGo.Text = "Go";
 			this.convButtonGo.UseVisualStyleBackColor = true;
 			this.convButtonGo.Click += new System.EventHandler(this.convButtonGo_Click);
+			// 
+			// convBtnSwap
+			// 
+			this.convBtnSwap.Location = new System.Drawing.Point(128, 56);
+			this.convBtnSwap.Name = "convBtnSwap";
+			this.convBtnSwap.Size = new System.Drawing.Size(75, 23);
+			this.convBtnSwap.TabIndex = 7;
+			this.convBtnSwap.Text = "Swap";
+			this.convBtnSwap.UseVisualStyleBackColor = true;
+			this.convBtnSwap.Click += new System.EventHandler(this.convBtnSwap_Click);
+			// 
+			// convType
+			// 
+			this.convType.FormattingEnabled = true;
+			this.convType.Items.AddRange(new object[] {
+            "Length",
+            "Weight"});
+			this.convType.Location = new System.Drawing.Point(159, 85);
+			this.convType.Name = "convType";
+			this.convType.Size = new System.Drawing.Size(121, 21);
+			this.convType.TabIndex = 8;
+			this.convType.Text = "Length";
+			this.convType.SelectedIndexChanged += new System.EventHandler(this.convType_SelectedIndexChanged);
 			// 
 			// MainForm
 			// 
@@ -637,6 +664,8 @@
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.ComboBox convToCombo;
 		private System.Windows.Forms.ComboBox convFromCombo;
+		private System.Windows.Forms.Button convBtnSwap;
+		private System.Windows.Forms.ComboBox convType;
 	}
 }
 
