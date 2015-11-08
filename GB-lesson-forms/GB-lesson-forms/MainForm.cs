@@ -13,9 +13,11 @@ namespace GB_lesson_forms
 	public partial class MainForm : Form
 	{
 		int counter = 0;
+		Random rnd;
 
 		public MainForm()
 		{
+			rnd = new Random();
 			InitializeComponent();
 		}
 
@@ -49,7 +51,6 @@ namespace GB_lesson_forms
 
 		private void btnGenerate_Click(object sender, EventArgs e)
 		{
-			Random rnd = new Random();
 			generatorLabel.Text = rnd.Next(Convert.ToInt32(udGenMin.Value), Convert.ToInt32(udGenMax.Value)).ToString();
 		}
 	}
