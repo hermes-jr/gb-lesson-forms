@@ -433,7 +433,7 @@
             0,
             0});
 			this.pwgenLen.Minimum = new decimal(new int[] {
-            4,
+            8,
             0,
             0,
             0});
@@ -441,7 +441,7 @@
 			this.pwgenLen.Size = new System.Drawing.Size(124, 20);
 			this.pwgenLen.TabIndex = 1;
 			this.pwgenLen.Value = new decimal(new int[] {
-            4,
+            8,
             0,
             0,
             0});

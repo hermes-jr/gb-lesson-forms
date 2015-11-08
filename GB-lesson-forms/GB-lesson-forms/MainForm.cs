@@ -120,6 +120,9 @@ namespace GB_lesson_forms
 		private void MainForm_Load(object sender, EventArgs e)
 		{
 			loadNotepadState();
+			pwgenOpts.SetItemChecked(0, true);
+			pwgenOpts.SetItemChecked(1, true);
+			pwgenOpts.SetItemChecked(2, true);
 		}
 
 		private void pwgenBtnDo_Click(object sender, EventArgs e)
@@ -147,6 +150,7 @@ namespace GB_lesson_forms
 				}
 			}
 			pwgenPass.Text = password;
+			Clipboard.SetText(password);
 		}
 	}
 }
