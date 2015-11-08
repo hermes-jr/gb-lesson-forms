@@ -152,5 +152,10 @@ namespace GB_lesson_forms
 			pwgenPass.Text = password;
 			Clipboard.SetText(password);
 		}
+
+		private void convButtonGo_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

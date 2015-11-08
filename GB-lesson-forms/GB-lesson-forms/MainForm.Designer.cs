@@ -63,6 +63,13 @@
 			this.pwgenLen = new System.Windows.Forms.NumericUpDown();
 			this.pwgenPass = new System.Windows.Forms.TextBox();
 			this.pwgenBtnDo = new System.Windows.Forms.Button();
+			this.convFromCombo = new System.Windows.Forms.ComboBox();
+			this.convToCombo = new System.Windows.Forms.ComboBox();
+			this.label1 = new System.Windows.Forms.Label();
+			this.label2 = new System.Windows.Forms.Label();
+			this.convTextFrom = new System.Windows.Forms.TextBox();
+			this.convTextTo = new System.Windows.Forms.TextBox();
+			this.convButtonGo = new System.Windows.Forms.Button();
 			this.MainMenu.SuspendLayout();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
@@ -73,6 +80,7 @@
 			this.splitContainer1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.udGenMin)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.udGenMax)).BeginInit();
+			this.tabPage3.SuspendLayout();
 			this.tabPage4.SuspendLayout();
 			this.tabPage5.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pwgenLen)).BeginInit();
@@ -349,6 +357,13 @@
 			// 
 			// tabPage3
 			// 
+			this.tabPage3.Controls.Add(this.convButtonGo);
+			this.tabPage3.Controls.Add(this.convTextTo);
+			this.tabPage3.Controls.Add(this.convTextFrom);
+			this.tabPage3.Controls.Add(this.label2);
+			this.tabPage3.Controls.Add(this.label1);
+			this.tabPage3.Controls.Add(this.convToCombo);
+			this.tabPage3.Controls.Add(this.convFromCombo);
 			this.tabPage3.Location = new System.Drawing.Point(4, 22);
 			this.tabPage3.Name = "tabPage3";
 			this.tabPage3.Size = new System.Drawing.Size(498, 275);
@@ -465,6 +480,80 @@
 			this.pwgenBtnDo.UseVisualStyleBackColor = true;
 			this.pwgenBtnDo.Click += new System.EventHandler(this.pwgenBtnDo_Click);
 			// 
+			// convFromCombo
+			// 
+			this.convFromCombo.FormattingEnabled = true;
+			this.convFromCombo.Items.AddRange(new object[] {
+            "mm",
+            "cm",
+            "dm",
+            "m",
+            "km",
+            "mile"});
+			this.convFromCombo.Location = new System.Drawing.Point(62, 3);
+			this.convFromCombo.Name = "convFromCombo";
+			this.convFromCombo.Size = new System.Drawing.Size(156, 21);
+			this.convFromCombo.TabIndex = 0;
+			this.convFromCombo.Text = "mm";
+			// 
+			// convToCombo
+			// 
+			this.convToCombo.FormattingEnabled = true;
+			this.convToCombo.Items.AddRange(new object[] {
+            "mm",
+            "cm",
+            "dm",
+            "m",
+            "km",
+            "mile"});
+			this.convToCombo.Location = new System.Drawing.Point(62, 30);
+			this.convToCombo.Name = "convToCombo";
+			this.convToCombo.Size = new System.Drawing.Size(156, 21);
+			this.convToCombo.TabIndex = 1;
+			this.convToCombo.Text = "km";
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Location = new System.Drawing.Point(21, 6);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(33, 13);
+			this.label1.TabIndex = 2;
+			this.label1.Text = "From:";
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Location = new System.Drawing.Point(21, 33);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(23, 13);
+			this.label2.TabIndex = 3;
+			this.label2.Text = "To:";
+			// 
+			// convTextFrom
+			// 
+			this.convTextFrom.Location = new System.Drawing.Point(224, 3);
+			this.convTextFrom.Name = "convTextFrom";
+			this.convTextFrom.Size = new System.Drawing.Size(100, 20);
+			this.convTextFrom.TabIndex = 4;
+			// 
+			// convTextTo
+			// 
+			this.convTextTo.Location = new System.Drawing.Point(224, 30);
+			this.convTextTo.Name = "convTextTo";
+			this.convTextTo.Size = new System.Drawing.Size(100, 20);
+			this.convTextTo.TabIndex = 5;
+			// 
+			// convButtonGo
+			// 
+			this.convButtonGo.Location = new System.Drawing.Point(249, 56);
+			this.convButtonGo.Name = "convButtonGo";
+			this.convButtonGo.Size = new System.Drawing.Size(75, 23);
+			this.convButtonGo.TabIndex = 6;
+			this.convButtonGo.Text = "Go";
+			this.convButtonGo.UseVisualStyleBackColor = true;
+			this.convButtonGo.Click += new System.EventHandler(this.convButtonGo_Click);
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -491,6 +580,8 @@
 			this.splitContainer1.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.udGenMin)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.udGenMax)).EndInit();
+			this.tabPage3.ResumeLayout(false);
+			this.tabPage3.PerformLayout();
 			this.tabPage4.ResumeLayout(false);
 			this.tabPage5.ResumeLayout(false);
 			this.tabPage5.PerformLayout();
@@ -537,6 +628,13 @@
 		private System.Windows.Forms.NumericUpDown pwgenLen;
 		private System.Windows.Forms.Button pwgenBtnDo;
 		private System.Windows.Forms.TextBox pwgenPass;
+		private System.Windows.Forms.Button convButtonGo;
+		private System.Windows.Forms.TextBox convTextTo;
+		private System.Windows.Forms.TextBox convTextFrom;
+		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.ComboBox convToCombo;
+		private System.Windows.Forms.ComboBox convFromCombo;
 	}
 }
 
