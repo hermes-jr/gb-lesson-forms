@@ -21,5 +21,10 @@ namespace GB_lesson_forms
 		{
 			this.Close();
 		}
+
+		private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			MessageBox.Show("Blah blah blah...", "About", MessageBoxButtons.OK);
+		}
 	}
 }
