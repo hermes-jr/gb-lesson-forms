@@ -14,7 +14,7 @@ namespace GB_lesson_forms
 	{
 		int counter = 0;
 		Random rnd;
-		char[] specials = new char[]{ '%', '*', '&', '/', ')', '(', '#', '$', '^', '@', '!'};
+		char[] specials = new char[]{ '%', '*', '&', '/', ')', '(', '#', '$', '^', '@', '!', '~', '-', '_'};
 
 		public MainForm()
 		{
@@ -142,7 +142,7 @@ namespace GB_lesson_forms
 						break;
 					case "Specials":
 					default:
-						password += specials[rnd.Next(11)];
+						password += specials[rnd.Next(14)];
 						break;
 				}
 			}
