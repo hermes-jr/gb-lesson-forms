@@ -170,7 +170,7 @@ namespace GB_lesson_forms
 
 		private void convButtonGo_Click(object sender, EventArgs e)
 		{
-			int fromval = Convert.ToInt32(convTextFrom.Text);
+			double fromval = Convert.ToDouble(convTextFrom.Text);
 			double m1 = metric[convFromCombo.Text];
 			double m2 = metric[convToCombo.Text];
 			double toval = fromval * ( m1 / m2 );
