@@ -31,6 +31,9 @@
 			this.MainMenu = new System.Windows.Forms.MenuStrip();
 			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.notepadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.insertDateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.insertTimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -52,9 +55,9 @@
 			this.tabPage3 = new System.Windows.Forms.TabPage();
 			this.tabPage4 = new System.Windows.Forms.TabPage();
 			this.notepad = new System.Windows.Forms.RichTextBox();
-			this.notepadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.insertDateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.insertTimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+			this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.MainMenu.SuspendLayout();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
@@ -95,6 +98,36 @@
 			this.exitToolStripMenuItem.Text = "Exit";
 			this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
 			// 
+			// notepadToolStripMenuItem
+			// 
+			this.notepadToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.insertDateToolStripMenuItem,
+            this.insertTimeToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.openToolStripMenuItem,
+            this.saveToolStripMenuItem});
+			this.notepadToolStripMenuItem.Name = "notepadToolStripMenuItem";
+			this.notepadToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+			this.notepadToolStripMenuItem.Text = "Notepad";
+			// 
+			// insertDateToolStripMenuItem
+			// 
+			this.insertDateToolStripMenuItem.Name = "insertDateToolStripMenuItem";
+			this.insertDateToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.D)));
+			this.insertDateToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+			this.insertDateToolStripMenuItem.Text = "Insert Date";
+			this.insertDateToolStripMenuItem.Click += new System.EventHandler(this.insertDateToolStripMenuItem_Click);
+			// 
+			// insertTimeToolStripMenuItem
+			// 
+			this.insertTimeToolStripMenuItem.Name = "insertTimeToolStripMenuItem";
+			this.insertTimeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.T)));
+			this.insertTimeToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+			this.insertTimeToolStripMenuItem.Text = "Insert Time";
+			this.insertTimeToolStripMenuItem.Click += new System.EventHandler(this.insertTimeToolStripMenuItem_Click);
+			// 
 			// helpToolStripMenuItem
 			// 
 			this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -106,7 +139,7 @@
 			// aboutToolStripMenuItem
 			// 
 			this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-			this.aboutToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+			this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
 			this.aboutToolStripMenuItem.Text = "About...";
 			this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
 			// 
@@ -334,32 +367,26 @@
 			this.notepad.TabIndex = 0;
 			this.notepad.Text = "";
 			// 
-			// notepadToolStripMenuItem
+			// toolStripMenuItem1
 			// 
-			this.notepadToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.insertDateToolStripMenuItem,
-            this.insertTimeToolStripMenuItem});
-			this.notepadToolStripMenuItem.Name = "notepadToolStripMenuItem";
-			this.notepadToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-			this.notepadToolStripMenuItem.Text = "Notepad";
+			this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+			this.toolStripMenuItem1.Size = new System.Drawing.Size(203, 6);
 			// 
-			// insertDateToolStripMenuItem
+			// openToolStripMenuItem
 			// 
-			this.insertDateToolStripMenuItem.Name = "insertDateToolStripMenuItem";
-			this.insertDateToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.D)));
-			this.insertDateToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
-			this.insertDateToolStripMenuItem.Text = "Insert Date";
-			this.insertDateToolStripMenuItem.Click += new System.EventHandler(this.insertDateToolStripMenuItem_Click);
+			this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+			this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+			this.openToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+			this.openToolStripMenuItem.Text = "Open";
+			this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
 			// 
-			// insertTimeToolStripMenuItem
+			// saveToolStripMenuItem
 			// 
-			this.insertTimeToolStripMenuItem.Name = "insertTimeToolStripMenuItem";
-			this.insertTimeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.T)));
-			this.insertTimeToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
-			this.insertTimeToolStripMenuItem.Text = "Insert Time";
-			this.insertTimeToolStripMenuItem.Click += new System.EventHandler(this.insertTimeToolStripMenuItem_Click);
+			this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+			this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+			this.saveToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+			this.saveToolStripMenuItem.Text = "Save";
+			this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
 			// 
 			// MainForm
 			// 
@@ -421,6 +448,9 @@
 		private System.Windows.Forms.ToolStripMenuItem notepadToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem insertDateToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem insertTimeToolStripMenuItem;
+		private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
+		private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
 	}
 }
 

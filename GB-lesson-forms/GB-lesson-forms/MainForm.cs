@@ -86,5 +86,29 @@ namespace GB_lesson_forms
 		{
 			notepad.AppendText(DateTime.Now.ToShortTimeString() + " ");
 		}
+
+		private void openToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				notepad.LoadFile("notepad.rtf");
+			}
+			catch
+			{
+				MessageBox.Show("Failed loading file"); 
+			}
+		}
+
+		private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				notepad.SaveFile("notepad.rtf");
+			}
+			catch
+			{
+				MessageBox.Show("Failed saving file"); 
+			}
+		}
 	}
 }
