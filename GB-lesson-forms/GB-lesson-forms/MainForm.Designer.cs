@@ -40,20 +40,27 @@
 			this.btnMinus = new System.Windows.Forms.Button();
 			this.btnPlus = new System.Windows.Forms.Button();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
+			this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+			this.generatorHistory = new System.Windows.Forms.TextBox();
+			this.generatorUniques = new System.Windows.Forms.TextBox();
+			this.genBtnCopy = new System.Windows.Forms.Button();
+			this.genbtnClear = new System.Windows.Forms.Button();
+			this.udGenMin = new System.Windows.Forms.NumericUpDown();
+			this.udGenMax = new System.Windows.Forms.NumericUpDown();
+			this.generatorLabel = new System.Windows.Forms.Label();
+			this.btnGenerate = new System.Windows.Forms.Button();
 			this.tabPage3 = new System.Windows.Forms.TabPage();
 			this.tabPage4 = new System.Windows.Forms.TabPage();
-			this.btnGenerate = new System.Windows.Forms.Button();
-			this.generatorLabel = new System.Windows.Forms.Label();
-			this.udGenMax = new System.Windows.Forms.NumericUpDown();
-			this.udGenMin = new System.Windows.Forms.NumericUpDown();
-			this.genHistory = new System.Windows.Forms.TextBox();
-			this.genbtnClear = new System.Windows.Forms.Button();
 			this.MainMenu.SuspendLayout();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.tabPage2.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.udGenMax)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+			this.splitContainer1.Panel1.SuspendLayout();
+			this.splitContainer1.Panel2.SuspendLayout();
+			this.splitContainer1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.udGenMin)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.udGenMax)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// MainMenu
@@ -167,8 +174,9 @@
 			// 
 			// tabPage2
 			// 
+			this.tabPage2.Controls.Add(this.splitContainer1);
+			this.tabPage2.Controls.Add(this.genBtnCopy);
 			this.tabPage2.Controls.Add(this.genbtnClear);
-			this.tabPage2.Controls.Add(this.genHistory);
 			this.tabPage2.Controls.Add(this.udGenMin);
 			this.tabPage2.Controls.Add(this.udGenMax);
 			this.tabPage2.Controls.Add(this.generatorLabel);
@@ -180,6 +188,117 @@
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.Text = "Generator";
 			this.tabPage2.UseVisualStyleBackColor = true;
+			// 
+			// splitContainer1
+			// 
+			this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.splitContainer1.IsSplitterFixed = true;
+			this.splitContainer1.Location = new System.Drawing.Point(8, 87);
+			this.splitContainer1.Name = "splitContainer1";
+			// 
+			// splitContainer1.Panel1
+			// 
+			this.splitContainer1.Panel1.Controls.Add(this.generatorHistory);
+			// 
+			// splitContainer1.Panel2
+			// 
+			this.splitContainer1.Panel2.Controls.Add(this.generatorUniques);
+			this.splitContainer1.Size = new System.Drawing.Size(482, 180);
+			this.splitContainer1.SplitterDistance = 241;
+			this.splitContainer1.TabIndex = 0;
+			// 
+			// generatorHistory
+			// 
+			this.generatorHistory.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.generatorHistory.Location = new System.Drawing.Point(0, 0);
+			this.generatorHistory.Multiline = true;
+			this.generatorHistory.Name = "generatorHistory";
+			this.generatorHistory.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+			this.generatorHistory.Size = new System.Drawing.Size(241, 180);
+			this.generatorHistory.TabIndex = 4;
+			// 
+			// generatorUniques
+			// 
+			this.generatorUniques.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.generatorUniques.Location = new System.Drawing.Point(0, 0);
+			this.generatorUniques.Multiline = true;
+			this.generatorUniques.Name = "generatorUniques";
+			this.generatorUniques.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+			this.generatorUniques.Size = new System.Drawing.Size(237, 180);
+			this.generatorUniques.TabIndex = 7;
+			// 
+			// genBtnCopy
+			// 
+			this.genBtnCopy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.genBtnCopy.Location = new System.Drawing.Point(334, 58);
+			this.genBtnCopy.Name = "genBtnCopy";
+			this.genBtnCopy.Size = new System.Drawing.Size(75, 23);
+			this.genBtnCopy.TabIndex = 6;
+			this.genBtnCopy.Text = "Copy";
+			this.genBtnCopy.UseVisualStyleBackColor = true;
+			this.genBtnCopy.Click += new System.EventHandler(this.genBtnCopy_Click);
+			// 
+			// genbtnClear
+			// 
+			this.genbtnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.genbtnClear.Location = new System.Drawing.Point(415, 58);
+			this.genbtnClear.Name = "genbtnClear";
+			this.genbtnClear.Size = new System.Drawing.Size(75, 23);
+			this.genbtnClear.TabIndex = 5;
+			this.genbtnClear.Text = "Reset";
+			this.genbtnClear.UseVisualStyleBackColor = true;
+			this.genbtnClear.Click += new System.EventHandler(this.genbtnClear_Click);
+			// 
+			// udGenMin
+			// 
+			this.udGenMin.Location = new System.Drawing.Point(8, 32);
+			this.udGenMin.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+			this.udGenMin.Name = "udGenMin";
+			this.udGenMin.Size = new System.Drawing.Size(75, 20);
+			this.udGenMin.TabIndex = 3;
+			// 
+			// udGenMax
+			// 
+			this.udGenMax.Location = new System.Drawing.Point(8, 6);
+			this.udGenMax.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+			this.udGenMax.Name = "udGenMax";
+			this.udGenMax.Size = new System.Drawing.Size(75, 20);
+			this.udGenMax.TabIndex = 2;
+			this.udGenMax.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+			// 
+			// generatorLabel
+			// 
+			this.generatorLabel.AutoSize = true;
+			this.generatorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.generatorLabel.Location = new System.Drawing.Point(124, 8);
+			this.generatorLabel.Name = "generatorLabel";
+			this.generatorLabel.Size = new System.Drawing.Size(68, 73);
+			this.generatorLabel.TabIndex = 1;
+			this.generatorLabel.Text = "0";
+			// 
+			// btnGenerate
+			// 
+			this.btnGenerate.Location = new System.Drawing.Point(8, 58);
+			this.btnGenerate.Name = "btnGenerate";
+			this.btnGenerate.Size = new System.Drawing.Size(75, 23);
+			this.btnGenerate.TabIndex = 0;
+			this.btnGenerate.Text = "Go";
+			this.btnGenerate.UseVisualStyleBackColor = true;
+			this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
 			// 
 			// tabPage3
 			// 
@@ -199,78 +318,6 @@
 			this.tabPage4.Text = "Notepad";
 			this.tabPage4.UseVisualStyleBackColor = true;
 			// 
-			// btnGenerate
-			// 
-			this.btnGenerate.Location = new System.Drawing.Point(8, 58);
-			this.btnGenerate.Name = "btnGenerate";
-			this.btnGenerate.Size = new System.Drawing.Size(75, 23);
-			this.btnGenerate.TabIndex = 0;
-			this.btnGenerate.Text = "Go";
-			this.btnGenerate.UseVisualStyleBackColor = true;
-			this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
-			// 
-			// generatorLabel
-			// 
-			this.generatorLabel.AutoSize = true;
-			this.generatorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.generatorLabel.Location = new System.Drawing.Point(124, 8);
-			this.generatorLabel.Name = "generatorLabel";
-			this.generatorLabel.Size = new System.Drawing.Size(68, 73);
-			this.generatorLabel.TabIndex = 1;
-			this.generatorLabel.Text = "0";
-			// 
-			// udGenMax
-			// 
-			this.udGenMax.Location = new System.Drawing.Point(8, 6);
-			this.udGenMax.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-			this.udGenMax.Name = "udGenMax";
-			this.udGenMax.Size = new System.Drawing.Size(75, 20);
-			this.udGenMax.TabIndex = 2;
-			this.udGenMax.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-			// 
-			// udGenMin
-			// 
-			this.udGenMin.Location = new System.Drawing.Point(8, 32);
-			this.udGenMin.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-			this.udGenMin.Name = "udGenMin";
-			this.udGenMin.Size = new System.Drawing.Size(75, 20);
-			this.udGenMin.TabIndex = 3;
-			// 
-			// genHistory
-			// 
-			this.genHistory.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.genHistory.Location = new System.Drawing.Point(8, 87);
-			this.genHistory.Multiline = true;
-			this.genHistory.Name = "genHistory";
-			this.genHistory.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-			this.genHistory.Size = new System.Drawing.Size(482, 180);
-			this.genHistory.TabIndex = 4;
-			// 
-			// genbtnClear
-			// 
-			this.genbtnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.genbtnClear.Location = new System.Drawing.Point(415, 58);
-			this.genbtnClear.Name = "genbtnClear";
-			this.genbtnClear.Size = new System.Drawing.Size(75, 23);
-			this.genbtnClear.TabIndex = 5;
-			this.genbtnClear.Text = "Reset";
-			this.genbtnClear.UseVisualStyleBackColor = true;
-			this.genbtnClear.Click += new System.EventHandler(this.genbtnClear_Click);
-			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -288,8 +335,14 @@
 			this.tabPage1.PerformLayout();
 			this.tabPage2.ResumeLayout(false);
 			this.tabPage2.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.udGenMax)).EndInit();
+			this.splitContainer1.Panel1.ResumeLayout(false);
+			this.splitContainer1.Panel1.PerformLayout();
+			this.splitContainer1.Panel2.ResumeLayout(false);
+			this.splitContainer1.Panel2.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+			this.splitContainer1.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.udGenMin)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.udGenMax)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -315,8 +368,11 @@
 		private System.Windows.Forms.NumericUpDown udGenMax;
 		private System.Windows.Forms.Label generatorLabel;
 		private System.Windows.Forms.Button btnGenerate;
-		private System.Windows.Forms.TextBox genHistory;
+		private System.Windows.Forms.TextBox generatorHistory;
 		private System.Windows.Forms.Button genbtnClear;
+		private System.Windows.Forms.Button genBtnCopy;
+		private System.Windows.Forms.TextBox generatorUniques;
+		private System.Windows.Forms.SplitContainer splitContainer1;
 	}
 }
 

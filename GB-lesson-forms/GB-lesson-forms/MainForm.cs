@@ -55,13 +55,26 @@ namespace GB_lesson_forms
 			int num2 = Convert.ToInt32(udGenMax.Value);
 			int randnum = rnd.Next(Math.Min(num1, num2), Math.Max(num1, num2) + 1);
 			generatorLabel.Text = randnum.ToString();
-			genHistory.AppendText(randnum + "\n");
+			generatorHistory.AppendText(randnum + "\n");
+			if (generatorUniques.Text.IndexOf(randnum.ToString()) == -1)
+			{
+				generatorUniques.AppendText(randnum + "\n");
+			}
 		}
 
 		private void genbtnClear_Click(object sender, EventArgs e)
 		{
 			generatorLabel.Text = "0";
-			genHistory.Clear();
+			generatorHistory.Clear();
+			generatorUniques.Clear();
+		}
+
+		private void genBtnCopy_Click(object sender, EventArgs e)
+		{
+			if(generatorHistory.Text != "")
+			{
+				Clipboard.SetText(generatorHistory.Text);
+			}
 		}
 	}
 }
