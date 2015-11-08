@@ -89,14 +89,7 @@ namespace GB_lesson_forms
 
 		private void openToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			try
-			{
-				notepad.LoadFile("notepad.rtf");
-			}
-			catch
-			{
-				MessageBox.Show("Failed loading file"); 
-			}
+			loadNotepadState();
 		}
 
 		private void saveToolStripMenuItem_Click(object sender, EventArgs e)
@@ -109,6 +102,23 @@ namespace GB_lesson_forms
 			{
 				MessageBox.Show("Failed saving file"); 
 			}
+		}
+
+		private void loadNotepadState()
+		{
+			try
+			{
+				notepad.LoadFile("notepad.rtf");
+			}
+			catch
+			{
+				MessageBox.Show("Failed loading file");
+			}
+		}
+
+		private void MainForm_Load(object sender, EventArgs e)
+		{
+			loadNotepadState();
 		}
 	}
 }

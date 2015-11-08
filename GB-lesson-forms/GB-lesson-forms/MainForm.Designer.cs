@@ -398,6 +398,7 @@
 			this.MainMenuStrip = this.MainMenu;
 			this.Name = "MainForm";
 			this.Text = "GB-lesson-forms";
+			this.Load += new System.EventHandler(this.MainForm_Load);
 			this.MainMenu.ResumeLayout(false);
 			this.MainMenu.PerformLayout();
 			this.tabControl1.ResumeLayout(false);
