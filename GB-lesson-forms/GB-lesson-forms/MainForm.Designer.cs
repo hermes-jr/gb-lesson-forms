@@ -47,6 +47,7 @@
 			this.udGenMax = new System.Windows.Forms.NumericUpDown();
 			this.udGenMin = new System.Windows.Forms.NumericUpDown();
 			this.genHistory = new System.Windows.Forms.TextBox();
+			this.genbtnClear = new System.Windows.Forms.Button();
 			this.MainMenu.SuspendLayout();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
@@ -166,6 +167,7 @@
 			// 
 			// tabPage2
 			// 
+			this.tabPage2.Controls.Add(this.genbtnClear);
 			this.tabPage2.Controls.Add(this.genHistory);
 			this.tabPage2.Controls.Add(this.udGenMin);
 			this.tabPage2.Controls.Add(this.udGenMax);
@@ -254,8 +256,20 @@
 			this.genHistory.Location = new System.Drawing.Point(8, 87);
 			this.genHistory.Multiline = true;
 			this.genHistory.Name = "genHistory";
+			this.genHistory.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
 			this.genHistory.Size = new System.Drawing.Size(482, 180);
 			this.genHistory.TabIndex = 4;
+			// 
+			// genbtnClear
+			// 
+			this.genbtnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.genbtnClear.Location = new System.Drawing.Point(415, 58);
+			this.genbtnClear.Name = "genbtnClear";
+			this.genbtnClear.Size = new System.Drawing.Size(75, 23);
+			this.genbtnClear.TabIndex = 5;
+			this.genbtnClear.Text = "Reset";
+			this.genbtnClear.UseVisualStyleBackColor = true;
+			this.genbtnClear.Click += new System.EventHandler(this.genbtnClear_Click);
 			// 
 			// MainForm
 			// 
@@ -302,6 +316,7 @@
 		private System.Windows.Forms.Label generatorLabel;
 		private System.Windows.Forms.Button btnGenerate;
 		private System.Windows.Forms.TextBox genHistory;
+		private System.Windows.Forms.Button genbtnClear;
 	}
 }
 
