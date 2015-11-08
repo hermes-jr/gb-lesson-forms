@@ -536,11 +536,13 @@
 			this.convTextFrom.Name = "convTextFrom";
 			this.convTextFrom.Size = new System.Drawing.Size(100, 20);
 			this.convTextFrom.TabIndex = 4;
+			this.convTextFrom.Text = "1";
 			// 
 			// convTextTo
 			// 
 			this.convTextTo.Location = new System.Drawing.Point(224, 30);
 			this.convTextTo.Name = "convTextTo";
+			this.convTextTo.ReadOnly = true;
 			this.convTextTo.Size = new System.Drawing.Size(100, 20);
 			this.convTextTo.TabIndex = 5;
 			// 

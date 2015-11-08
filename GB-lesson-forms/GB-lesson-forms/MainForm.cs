@@ -12,14 +12,29 @@ namespace GB_lesson_forms
 {
 	public partial class MainForm : Form
 	{
+		// For counter
 		int counter = 0;
+
+		// For pwgen
 		Random rnd;
 		char[] specials = new char[]{ '%', '*', '&', '/', ')', '(', '#', '$', '^', '@', '!', '~', '-', '_'};
 
+		// For converter
+		Dictionary<string, double> metric;
+
 		public MainForm()
 		{
-			rnd = new Random();
 			InitializeComponent();
+			rnd = new Random();
+
+			// Filling dictionary for converter
+			metric = new Dictionary<string, double>();
+			metric.Add("mm", 1);
+			metric.Add("cm", 10);
+			metric.Add("dm", 100);
+			metric.Add("m", 1000);
+			metric.Add("km", 1000000);
+			metric.Add("mile", 1609344);
 		}
 
 		private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -155,7 +170,11 @@ namespace GB_lesson_forms
 
 		private void convButtonGo_Click(object sender, EventArgs e)
 		{
-
+			int fromval = Convert.ToInt32(convTextFrom.Text);
+			double m1 = metric[convFromCombo.Text];
+			double m2 = metric[convToCombo.Text];
+			double toval = fromval * ( m1 / m2 );
+			convTextTo.Text = toval.ToString();
 		}
 	}
 }
