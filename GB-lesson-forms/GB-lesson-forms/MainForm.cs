@@ -51,7 +51,9 @@ namespace GB_lesson_forms
 
 		private void btnGenerate_Click(object sender, EventArgs e)
 		{
-			generatorLabel.Text = rnd.Next(Convert.ToInt32(udGenMin.Value), Convert.ToInt32(udGenMax.Value)).ToString();
+			int num = rnd.Next(Convert.ToInt32(udGenMin.Value), Convert.ToInt32(udGenMax.Value + 1));
+			generatorLabel.Text = num.ToString();
+			genHistory.AppendText(num + "\n");
 		}
 	}
 }

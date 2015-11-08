@@ -46,6 +46,7 @@
 			this.generatorLabel = new System.Windows.Forms.Label();
 			this.udGenMax = new System.Windows.Forms.NumericUpDown();
 			this.udGenMin = new System.Windows.Forms.NumericUpDown();
+			this.genHistory = new System.Windows.Forms.TextBox();
 			this.MainMenu.SuspendLayout();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
@@ -165,6 +166,7 @@
 			// 
 			// tabPage2
 			// 
+			this.tabPage2.Controls.Add(this.genHistory);
 			this.tabPage2.Controls.Add(this.udGenMin);
 			this.tabPage2.Controls.Add(this.udGenMax);
 			this.tabPage2.Controls.Add(this.generatorLabel);
@@ -244,6 +246,17 @@
 			this.udGenMin.Size = new System.Drawing.Size(75, 20);
 			this.udGenMin.TabIndex = 3;
 			// 
+			// genHistory
+			// 
+			this.genHistory.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.genHistory.Location = new System.Drawing.Point(8, 87);
+			this.genHistory.Multiline = true;
+			this.genHistory.Name = "genHistory";
+			this.genHistory.Size = new System.Drawing.Size(482, 180);
+			this.genHistory.TabIndex = 4;
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -288,6 +301,7 @@
 		private System.Windows.Forms.NumericUpDown udGenMax;
 		private System.Windows.Forms.Label generatorLabel;
 		private System.Windows.Forms.Button btnGenerate;
+		private System.Windows.Forms.TextBox genHistory;
 	}
 }
 
