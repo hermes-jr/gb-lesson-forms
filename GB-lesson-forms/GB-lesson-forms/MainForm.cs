@@ -46,5 +46,11 @@ namespace GB_lesson_forms
 			counter = 0;
 			counterLabel.Text = counter.ToString();
 		}
+
+		private void btnGenerate_Click(object sender, EventArgs e)
+		{
+			Random rnd = new Random();
+			generatorLabel.Text = rnd.Next(Convert.ToInt32(udGenMin.Value), Convert.ToInt32(udGenMax.Value)).ToString();
+		}
 	}
 }
