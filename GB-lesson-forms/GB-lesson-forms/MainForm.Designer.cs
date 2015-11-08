@@ -58,6 +58,11 @@
 			this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
 			this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.tabPage5 = new System.Windows.Forms.TabPage();
+			this.pwgenOpts = new System.Windows.Forms.CheckedListBox();
+			this.pwgenLen = new System.Windows.Forms.NumericUpDown();
+			this.pwgenPass = new System.Windows.Forms.TextBox();
+			this.pwgenBtnDo = new System.Windows.Forms.Button();
 			this.MainMenu.SuspendLayout();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
@@ -69,6 +74,8 @@
 			((System.ComponentModel.ISupportInitialize)(this.udGenMin)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.udGenMax)).BeginInit();
 			this.tabPage4.SuspendLayout();
+			this.tabPage5.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pwgenLen)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// MainMenu
@@ -149,6 +156,7 @@
 			this.tabControl1.Controls.Add(this.tabPage2);
 			this.tabControl1.Controls.Add(this.tabPage3);
 			this.tabControl1.Controls.Add(this.tabPage4);
+			this.tabControl1.Controls.Add(this.tabPage5);
 			this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tabControl1.Location = new System.Drawing.Point(0, 24);
 			this.tabControl1.Name = "tabControl1";
@@ -388,6 +396,75 @@
 			this.saveToolStripMenuItem.Text = "Save";
 			this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
 			// 
+			// tabPage5
+			// 
+			this.tabPage5.Controls.Add(this.pwgenBtnDo);
+			this.tabPage5.Controls.Add(this.pwgenPass);
+			this.tabPage5.Controls.Add(this.pwgenLen);
+			this.tabPage5.Controls.Add(this.pwgenOpts);
+			this.tabPage5.Location = new System.Drawing.Point(4, 22);
+			this.tabPage5.Name = "tabPage5";
+			this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPage5.Size = new System.Drawing.Size(498, 275);
+			this.tabPage5.TabIndex = 4;
+			this.tabPage5.Text = "Pwgen";
+			this.tabPage5.UseVisualStyleBackColor = true;
+			// 
+			// pwgenOpts
+			// 
+			this.pwgenOpts.CheckOnClick = true;
+			this.pwgenOpts.FormattingEnabled = true;
+			this.pwgenOpts.Items.AddRange(new object[] {
+            "Numbers",
+            "Lowercase",
+            "Uppercase",
+            "Specials"});
+			this.pwgenOpts.Location = new System.Drawing.Point(8, 6);
+			this.pwgenOpts.Name = "pwgenOpts";
+			this.pwgenOpts.Size = new System.Drawing.Size(124, 64);
+			this.pwgenOpts.TabIndex = 0;
+			// 
+			// pwgenLen
+			// 
+			this.pwgenLen.Location = new System.Drawing.Point(8, 76);
+			this.pwgenLen.Maximum = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+			this.pwgenLen.Minimum = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
+			this.pwgenLen.Name = "pwgenLen";
+			this.pwgenLen.Size = new System.Drawing.Size(124, 20);
+			this.pwgenLen.TabIndex = 1;
+			this.pwgenLen.Value = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
+			// 
+			// pwgenPass
+			// 
+			this.pwgenPass.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.pwgenPass.Location = new System.Drawing.Point(8, 102);
+			this.pwgenPass.Name = "pwgenPass";
+			this.pwgenPass.Size = new System.Drawing.Size(482, 20);
+			this.pwgenPass.TabIndex = 2;
+			// 
+			// pwgenBtnDo
+			// 
+			this.pwgenBtnDo.Location = new System.Drawing.Point(138, 6);
+			this.pwgenBtnDo.Name = "pwgenBtnDo";
+			this.pwgenBtnDo.Size = new System.Drawing.Size(75, 23);
+			this.pwgenBtnDo.TabIndex = 3;
+			this.pwgenBtnDo.Text = "Go";
+			this.pwgenBtnDo.UseVisualStyleBackColor = true;
+			this.pwgenBtnDo.Click += new System.EventHandler(this.pwgenBtnDo_Click);
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -415,6 +492,9 @@
 			((System.ComponentModel.ISupportInitialize)(this.udGenMin)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.udGenMax)).EndInit();
 			this.tabPage4.ResumeLayout(false);
+			this.tabPage5.ResumeLayout(false);
+			this.tabPage5.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pwgenLen)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -452,6 +532,11 @@
 		private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
 		private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
+		private System.Windows.Forms.TabPage tabPage5;
+		private System.Windows.Forms.CheckedListBox pwgenOpts;
+		private System.Windows.Forms.NumericUpDown pwgenLen;
+		private System.Windows.Forms.Button pwgenBtnDo;
+		private System.Windows.Forms.TextBox pwgenPass;
 	}
 }
 

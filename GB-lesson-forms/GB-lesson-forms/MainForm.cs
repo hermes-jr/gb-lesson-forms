@@ -14,6 +14,7 @@ namespace GB_lesson_forms
 	{
 		int counter = 0;
 		Random rnd;
+		char[] specials = new char[]{ '%', '*', '&', '/', ')', '(', '#', '$', '^', '@', '!'};
 
 		public MainForm()
 		{
@@ -119,6 +120,33 @@ namespace GB_lesson_forms
 		private void MainForm_Load(object sender, EventArgs e)
 		{
 			loadNotepadState();
+		}
+
+		private void pwgenBtnDo_Click(object sender, EventArgs e)
+		{
+			if (pwgenOpts.CheckedItems.Count == 0) return;
+			string password = "";
+			for (int iter = 0; iter < pwgenLen.Value; iter++)
+			{
+				int tp = rnd.Next(0, pwgenOpts.CheckedItems.Count);
+				switch (pwgenOpts.CheckedItems[tp].ToString())
+				{
+					case "Numbers":
+						password += rnd.Next(10).ToString();
+						break;
+					case "Lowercase":
+						password += Convert.ToChar(rnd.Next(97, 123));
+						break;
+					case "Uppercase":
+						password += Convert.ToChar(rnd.Next(65, 89));
+						break;
+					case "Specials":
+					default:
+						password += specials[rnd.Next(11)];
+						break;
+				}
+			}
+			pwgenPass.Text = password;
 		}
 	}
 }
